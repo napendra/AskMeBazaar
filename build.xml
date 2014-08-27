@@ -5,22 +5,24 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="askmebazaar">
     <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="../../eclipse"/>
+    <property name="JUNIT_HOME" value="https://github.com/napendra/AskMeBazaar/tree/master/Jar"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+        <pathelement location="${JUNIT_HOME}/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
+        <pathelement location="${JUNIT_HOME}/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
     <path id="askmebazaar.classpath">
         <pathelement location="bin"/>
         <path refid="JUnit 4.libraryclasspath"/>
-        <pathelement location="../../Users/Work/Downloads/Compressed/org.apache.commons.httpclient.jar"/>
-        <pathelement location="../../Users/Work/Downloads/Compressed/commons-logging-1.2/commons-logging-1.2.jar"/>
-        <pathelement location="../../Users/Work/Downloads/Compressed/org-apache-commons-codec.jar"/>
-        <pathelement location="../../Users/Work/Downloads/Compressed/java-json.jar"/>
+        <pathelement location="${JUNIT_HOME}/org.apache.commons.httpclient.jar"/>
+        <pathelement location="${JUNIT_HOME}/commons-logging-1.2.jar"/>
+        <pathelement location="${JUNIT_HOME}/org-apache-commons-codec.jar"/>
+        <pathelement location="${JUNIT_HOME}/java-json.jar"/>
+        <pathelement location="${JUNIT_HOME}/rt.jar"/>	
+        <pathelement location="${JUNIT_HOME}/junit-dataprovider-1.8.0.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -54,11 +56,11 @@
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
     <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
         <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+            <fileset dir="${JUNIT_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
         </copy>
         <unzip dest="${ant.library.dir}">
             <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+            <fileset dir="${JUNIT_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
         </unzip>
     </target>
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
@@ -69,22 +71,9 @@
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="com.canbrand.askmebazaar.AskmebazaarTest" todir="${junit.output.dir}"/>
+            <test name="tst/com.canbrand.askmebazaar.AskMeBazaarOrderFetchTest" todir="${junit.output.dir}"/>
             <classpath refid="askmebazaar.classpath"/>
         </junit>
-    </target>
-    <target name="AskmebazaarTest (1)">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="com.canbrand.askmebazaar.AskmebazaarTest" todir="${junit.output.dir}"/>
-            <classpath refid="askmebazaar.classpath"/>
-        </junit>
-    </target>
-    <target name="test">
-        <java classname="com.canbrand.askmebazaar.test" failonerror="true" fork="yes">
-            <classpath refid="askmebazaar.classpath"/>
-        </java>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">

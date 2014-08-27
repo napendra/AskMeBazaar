@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="tst"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_60"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Work/Downloads/Compressed/junit-dataprovider-1.8.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Work/Downloads/Compressed/junit-dataprovider-1.8.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Work/Downloads/Compressed/junit-dataprovider-1.8.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/selenium-2.42.2/libs/httpcore-4.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/selenium-2.42.2/selenium-server-standalone-2.42.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/eclipse-extra-lib/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/eclipse-extra-lib/java-json.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/eclipse-extra-lib/org.apache.commons.httpclient.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/eclipse-extra-lib/org-apache-commons-codec.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -11,7 +11,6 @@
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="${JUNIT_HOME}/junit.jar"/>
         <pathelement location="${JUNIT_HOME}/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
     <path id="askmebazaar.classpath">
@@ -23,6 +22,7 @@
         <pathelement location="${JUNIT_HOME}/java-json.jar"/>
         <pathelement location="${JUNIT_HOME}/rt.jar"/>	
         <pathelement location="${JUNIT_HOME}/junit-dataprovider-1.8.0.jar"/>
+        <pathelement location="${JUNIT_HOME}/junit.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>

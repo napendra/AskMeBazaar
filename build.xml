@@ -28,7 +28,7 @@
  <path id="classpath">
 <!--  <fileset dir="${jdom.home}" includes="lib/*.jar"/>
   <fileset dir="${jdom.home}" includes="build/*.jar"/> -->
-  <fileset dir="${junit.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/junit.jar"/>
+  <fileset dir="https://bitbucket.org/napendra/askmebazaar/downloads/" includes="junit.jar"/>
   <fileset dir="${httpclient.home}" includes="org.apache.commons.httpclient.jar"/>
   <fileset dir="${dataprovider.home}" includes="junit-dataprovider-1.8.0.jar"/>
   <fileset dir="${rt.home}" includes="downloads/rt.jar"/>
@@ -40,7 +40,7 @@
 
  <path id="classpath.test">
   <path refid="classpath"/>
-  <pathelement location="${build}"/>
+ <!-- <pathelement location="${build}"/> -->
  </path>
 
 

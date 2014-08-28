@@ -61,6 +61,7 @@
         <unzip dest="${ant.library.dir}">
             <patternset includes="jdtCompilerAdapter.jar"/>
             <fileset dir="${JUNIT_HOME}" includes="org.eclipse.jdt.core_*.jar"/>
+            <fileset dir="${JUNIT_HOME}" includes="junit.jar"/>
         </unzip>
     </target>
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">

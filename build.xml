@@ -68,8 +68,8 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="test">
-        <!--  <mkdir dir="${junit.output.dir}"/> -->
+<!--    <target name="test">
+        <mkdir dir="${junit.output.dir}"/>
         <junit printsummary="yes">
             <classpath>
             <path refid="askmebazaar.classpath"/>
@@ -78,7 +78,18 @@
             <test name="com.canbrand.askmebazaar.AskMeBazaarOrderFetchTest" todir="${junit.output.dir}"/>
             <formatter type="xml"/>
        </junit>
+    </target> -->
+    <target name="test" depends="compile" description="Execute Unit Tests" >
+      <junit printsummary="yes" fork="no" haltonfailure="yes">
+      <classpath refid="askmebazaar.classpath" />
+
+      <formatter type="xml" />
+
+      <test name="com.canbrand.askmebazaar.AskMeBazaarOrderFetchTest" />
+      </junit>
     </target>
+
+    
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">

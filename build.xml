@@ -28,14 +28,14 @@
  <path id="classpath">
 <!--  <fileset dir="${jdom.home}" includes="lib/*.jar"/>
   <fileset dir="${jdom.home}" includes="build/*.jar"/> -->
-  <fileset dir="${junit.home}" includes="junit.jar"/>
-  <fileset dir="${httpclient.home}" includes="org.apache.commons.httpclient.jar"/>
-  <fileset dir="${dataprovider.home}" includes="junit-dataprovider-1.8.0.jar"/>
-  <fileset dir="${rt.home}" includes="rt.jar"/>
-  <fileset dir="${json.home}" includes="java-json.jar"/> 
-  <fileset dir="${commons.home}" includes="commons-logging-1.2.jar"/>
-  <fileset dir="${hamcrest.home}" includes="org.hamcrest.core_1.3.0.v201303031735.jar"/>  
-  <fileset dir="${codec.home}" includes="org-apache-commons-codec.jar"/>
+  <fileset dir="${junit.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/junit.jar"/>
+  <fileset dir="${httpclient.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/org.apache.commons.httpclient.jar"/>
+  <fileset dir="${dataprovider.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/junit-dataprovider-1.8.0.jar"/>
+  <fileset dir="${rt.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/rt.jar"/>
+  <fileset dir="${json.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/java-json.jar"/> 
+  <fileset dir="${commons.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/commons-logging-1.2.jar"/>
+  <fileset dir="${hamcrest.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/org.hamcrest.core_1.3.0.v201303031735.jar"/>  
+  <fileset dir="${codec.home}" includes="https://bitbucket.org/napendra/askmebazaar/downloads/org-apache-commons-codec.jar"/>
  </path>
 
  <path id="classpath.test">

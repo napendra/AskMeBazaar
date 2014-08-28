@@ -69,8 +69,8 @@
         <antcall target="build"/>
     </target>
     <target name="askmebazaar">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="yes">
+        <!--  <mkdir dir="${junit.output.dir}"/> -->
+        <junit printsummary="yes">
             <classpath>
             <path refid="askmebazaar.classpath"/>
             <pathelement path="${JUNIT_HOME}/junit.jar"/>

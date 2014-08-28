@@ -38,10 +38,10 @@
   <fileset dir="${codec.home}" includes="org-apache-commons-codec.jar"/>
  </path>
 
- <path id="classpath.test">
+ <!--<path id="classpath.test">
   <path refid="classpath"/>
  <!-- <pathelement location="${build}"/> -->
- </path>
+ <!-- </path> -->
 
 
 
@@ -74,7 +74,7 @@
  <javac destdir="bin" >
   <src path="${src}" />
   <src path="${src.test}" />
-  <classpath refid="classpath"/>
+  <classpath id="classpath"/>
  </javac>
 
  </target>
@@ -101,7 +101,7 @@
   -->
  <target name="test" depends="compile" description="Execute Unit Tests" >
   <junit printsummary="yes" fork="no" haltonfailure="yes">
-   <classpath refid="classpath.test" />
+   <classpath id="classpath" />
 
    <formatter type="xml" />
 

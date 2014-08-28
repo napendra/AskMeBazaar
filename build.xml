@@ -49,11 +49,20 @@
    Initialize the environment
   -->
  <target name="init">
- <!-- Create the time stamp -->
- <tstamp/>
- <!-- Create the build directory structure used by compile -->
- <mkdir dir="build"/>
- </target>
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="tst">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
 
 
  <!-- 
@@ -62,7 +71,7 @@
  <target name="compile" depends="init" description="compile the source " >
 
  <!-- Compile the java code from ${src} and ${src.test} into ${build} -->
- <javac destdir="build" >
+ <javac destdir="bin" >
   <src path="${src}" />
   <src path="${src.test}" />
   <classpath refid="classpath"/>

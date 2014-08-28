@@ -71,7 +71,7 @@
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="tst/com.canbrand.askmebazaar.AskMeBazaarOrderFetchTest" todir="${junit.output.dir}"/>
+            <test name="com.canbrand.askmebazaar.AskMeBazaarOrderFetchTest" todir="${junit.output.dir}"/>
             <classpath refid="askmebazaar.classpath"/>
         </junit>
     </target>

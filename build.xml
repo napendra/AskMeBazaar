@@ -40,7 +40,7 @@
 
  <path id="classpath.test">
   <path refid="classpath"/>
-  <pathelement location="${build}"/>
+  <!-- <pathelement location="${build}"/> -->
  </path>
 
 

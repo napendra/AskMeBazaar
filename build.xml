@@ -72,8 +72,10 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="com.canbrand.askmebazaar.AskMeBazaarOrderFetchTest" todir="${junit.output.dir}"/>
-            <classpath refid="askmebazaar.classpath"/>
-        </junit>
+            <classpath refid="askmebazaar.classpath" >
+            <pathelement path="${JUNIT_HOME}/junit.jar"/>
+            </classpath>
+       </junit>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">

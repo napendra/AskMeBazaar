@@ -5,14 +5,14 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="askmebazaar">
     <property environment="env"/>
-    <property name="JUNIT_HOME" value="https://github.com/napendra/AskMeBazaar/tree/master/Jar"/>
+    <property name="JUNIT_HOME" value="https://bitbucket.org/napendra/askmebazaar/downloads"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="${JUNIT_HOME}/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
-        <pathelement location="${JUNIT_HOME}/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+        <pathelement location="${JUNIT_HOME}/org.junit_4.11.0.v201303080030/junit.jar"/>
+        <pathelement location="${JUNIT_HOME}/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
     <path id="askmebazaar.classpath">
         <pathelement location="bin"/>

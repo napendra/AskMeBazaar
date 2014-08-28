@@ -40,8 +40,8 @@
 
  <!--<path id="classpath.test">
   <path refid="classpath"/>
- <!-- <pathelement location="${build}"/> -->
- <!-- </path> -->
+  <pathelement location="${build}"/>
+  </path> -->
 
 
 
@@ -74,7 +74,7 @@
  <javac destdir="bin" >
   <src path="${src}" />
   <src path="${src.test}" />
-  <classpath id="classpath"/>
+  <classpath refid="classpath"/>
  </javac>
 
  </target>
@@ -101,7 +101,7 @@
   -->
  <target name="test" depends="compile" description="Execute Unit Tests" >
   <junit printsummary="yes" fork="no" haltonfailure="yes">
-   <classpath id="classpath" />
+   <classpath refid="classpath" />
 
    <formatter type="xml" />
 

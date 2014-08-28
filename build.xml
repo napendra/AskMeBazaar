@@ -40,7 +40,7 @@
 
  <path id="classpath.test">
   <path refid="classpath"/>
-  <!-- <pathelement location="${build}"/> -->
+  <pathelement location="${build}"/>
  </path>
 
 
@@ -52,7 +52,7 @@
  <!-- Create the time stamp -->
  <tstamp/>
  <!-- Create the build directory structure used by compile -->
- <mkdir dir="${build}"/>
+ <mkdir dir="build"/>
  </target>
 
 
@@ -62,7 +62,7 @@
  <target name="compile" depends="init" description="compile the source " >
 
  <!-- Compile the java code from ${src} and ${src.test} into ${build} -->
- <javac destdir="${build}" >
+ <javac destdir="build" >
   <src path="${src}" />
   <src path="${src.test}" />
   <classpath refid="classpath"/>
